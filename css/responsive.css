@@ -628,3 +628,56 @@
         display: none !important;
     }
 }
+@media (max-width: 900px) {
+
+    html,
+    body {
+        height: auto;
+        min-height: 100%;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .container {
+        min-height: 100vh;
+        height: auto;
+    }
+
+    main.player {
+        min-height: auto;
+        height: auto;
+
+        padding-top: 45px;
+        padding-bottom: 140px;
+
+        justify-content: flex-start;
+    }
+
+    .player-top {
+        margin-bottom: 30px;
+    }
+
+    .progress-section {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .controls {
+        margin-bottom: 30px;
+    }
+
+    .volume {
+        margin-bottom: 30px;
+    }
+
+    /* Fixed bottom navigation */
+    .sidebar {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+
+        height: 70px;
+        z-index: 9999;
+    }
+}
