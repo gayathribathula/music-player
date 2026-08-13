@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melody Music Player</title>
+
+    
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/player.css">
+    <link rel="stylesheet" href="css/songs.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+
+
+</head>
+<body>
+    <div class="container">
+    <aside class="sidebar">
+
+        <div class="logo">
+            <i class="fa-solid fa-music"></i>
+            <h2>Melody</h2>
+        </div>
+
+        <nav>
+            <ul id="menu">
+
+                <li id="homeBtn" class="active">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Now Playing</span>
+                </li>
+
+                <li id="searchBtn">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <span>Search</span>
+                </li>
+
+                <li id="libraryBtn">
+                    <i class="fa-solid fa-book"></i>
+                    <span>Library</span>
+                </li>
+
+                <li id="favBtn">
+                    <i class="fa-regular fa-heart"></i>
+                    <span>Favorites</span>
+                </li>
+
+            </ul>
+        </nav>
+
+    </aside>
+    <main class="player">
+        <div class="player-top">
+            <div class="cover">
+                <img id="coverImage" src="assets/coverimg.png" alt="Album Cover">
+            </div>
+            <div class="song-info">
+                <small id="playingText">
+                    PLAYING NOW
+                </small>
+                <h1 id="songTitle">
+                    Dreams
+                </h1>
+                <h2 id="artistName">
+                    Imagine Dragons
+                </h2>
+                <p id="albumName">
+                    Night Visions
+                </p>
+                <div class="actions">
+                    <button id="favoriteSong">
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="progress-section">
+
+            <span id="currentTime">0:00</span>
+
+            <input
+                id="progressBar"
+                type="range"
+                value="0">
+
+            <span id="totalTime">0:00</span>
+
+        </div>
+        <div class="controls">
+
+            <button id="shuffleBtn">
+                <i class="fa-solid fa-shuffle"></i>
+            </button>
+
+            <button id="previousBtn">
+                <i class="fa-solid fa-backward-step"></i>
+            </button>
+
+            <button id="playBtn" class="play-btn">
+                <i class="fa-solid fa-play"></i>
+            </button>
+
+            <button id="nextBtn">
+                <i class="fa-solid fa-forward-step"></i>
+            </button>
+
+            <button id="repeatBtn">
+                <i class="fa-solid fa-repeat"></i>
+            </button>
+
+        </div>
+
+        <div class="volume">
+
+            <i class="fa-solid fa-volume-low"></i>
+            <input
+                id="volumeBar"
+                type="range"
+                value="100">
+
+            <i class="fa-solid fa-volume-high"></i>
+
+        </div>
+        <audio id="audioPlayer"></audio>
+
+    </main>
+
+    <section class="playlist">
+
+        <h2 id="songsHeading">Songs</h2>
+
+        <div id="songsContainer">
+
+            <div class="song active">
+
+                <img src="assets/coverimg.png">
+
+                <div class="details">
+
+                    <h4>Dreams</h4>
+
+                    <p>Imagine Dragons</p>
+
+                </div>
+
+                <span>3:40</span>
+
+            </div>
+
+            <div class="song">
+
+                <img src="assets/coverimg.png">
+
+                <div class="details">
+
+                    <h4>Perfect</h4>
+
+                    <p>Ed Sheeran</p>
+
+                </div>
+
+                <span>4:23</span>
+
+            </div>
+
+            <div class="song">
+
+                <img src="assets/coverimg.png">
+
+                <div class="details">
+
+                    <h4>Believer</h4>
+
+                    <p>Imagine Dragons</p>
+
+                </div>
+
+                <span>3:22</span>
+
+            </div>
+
+            <div class="song">
+
+                <img src="assets/coverimg.png">
+
+                <div class="details">
+
+                    <h4>Someone You Loved</h4>
+
+                    <p>Lewis Capaldi</p>
+
+                </div>
+
+                <span>3:02</span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</div>
+<script src="script.js"></script>
+</body>
+
+</html>
